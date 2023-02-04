@@ -37,26 +37,26 @@ int main() {
     }
 
     char gamemode_input(){
-    char mode;
-    cin >> mode;
-    while(true){
-        cin.clear();
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        if (mode == 'a' || mode == 'A'){
-            return 'A';
+        char mode;
+        cin >> mode;
+        while(true){
+            cin.clear();
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            if (mode == 'a' || mode == 'A'){
+                return 'A';
+            }
+            else if (mode == 'a' || mode == 'A'){
+                return 'B';
+            }
+            else if (mode == 'a' || mode == 'A'){
+                return 'C';
+            }
+            else if (mode == 'a' || mode == 'A'){
+                return 'D';
+            }
+            else{
+                cout << "invalid input. Please give the letter 'A', 'B, 'C', or 'D" << inputfield;
+                cin >> mode;
+            }
         }
-        else if (mode == 'a' || mode == 'A'){
-            return 'B';
-        }
-        else if (mode == 'a' || mode == 'A'){
-            return 'C';
-        }
-        else if (mode == 'a' || mode == 'A'){
-            return 'D';
-        }
-        else{
-            cout << "invalid input. Please give the letter 'A', 'B, 'C', or 'D" << inputfield;
-            cin >> mode;
-        }
-    }
 }
