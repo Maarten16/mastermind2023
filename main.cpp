@@ -1,5 +1,12 @@
 #include <iostream>
 #include <limits>
+
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
+
 #define inputfield "\n\t: "
 using std::cout; using std::cin;
 
@@ -8,10 +15,12 @@ char gamemode_input();
 
 int main() {
     cout << "Hello, welcome to mastermind.\n";
+    sleep(1);
     cout << "How long do you want the secret code to be?\nEnter a number between 0 and 10" << inputfield;
     int secret_length = length_input();
     cout << "The secret code is " << secret_length << " pins long\n";
     cout << "Which gamemode do you want to play?\n";
+    sleep(1);
     cout << "Type 'A' if you player to make and guess the secret code\n";
     cout << "Type 'B' if you want player to make and computer to guess the secret code\n";
     cout << "Type 'C' if you want computer to make and player to guess the secret code\n";
@@ -45,13 +54,13 @@ int main() {
             if (mode == 'a' || mode == 'A'){
                 return 'A';
             }
-            else if (mode == 'a' || mode == 'A'){
+            else if (mode == 'b' || mode == 'B'){
                 return 'B';
             }
-            else if (mode == 'a' || mode == 'A'){
+            else if (mode == 'c' || mode == 'C'){
                 return 'C';
             }
-            else if (mode == 'a' || mode == 'A'){
+            else if (mode == 'd' || mode == 'D'){
                 return 'D';
             }
             else{
