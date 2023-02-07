@@ -8,42 +8,64 @@
 #endif
 
 #define inputfield "\n\t: "
+#define endsection std::string(30, '=')
+
 using std::cout; using std::cin;
 
-int length_input();
+int int_input(int minimum, int maximum);
 char gamemode_input();
 
 int main() {
-    cout << "Hello, welcome to mastermind.\n";
-    sleep(1);
-    cout << "How long do you want the secret code to be?\nEnter a number between 0 and 10" << inputfield;
-    int secret_length = length_input();
-    cout << "The secret code is " << secret_length << " pins long\n";
+    //adjustable variables
+    int minimumcolors = 2;
+    int maximumcolors = 9;
+    int minimumlength = 2;
+    int maximumlength = 9;
+    int minimumguesses = 4;
+    int maximumguesses = 20;
+
+    //code
+    cout << "Hello, welcome to mastermind!\n";
+
+            //gamemode
     cout << "Which gamemode do you want to play?\n";
-    sleep(1);
     cout << "Type 'A' if you player to make and guess the secret code\n";
     cout << "Type 'B' if you want player to make and computer to guess the secret code\n";
     cout << "Type 'C' if you want computer to make and player to guess the secret code\n";
     cout << "type 'D' if you want computer to make and guess the secret code" << inputfield;
     char gamemode = gamemode_input();
-    cout << "You chose gamemode " << gamemode;
+    cout << "You chose gamemode " << gamemode << "\n";
+    cout << endsection << '\n' << '\n';
+
+            //colors
+    cout << "With how many colors do you want to play?\nEnter a number between " << minimumcolors << " and " << maximumcolors << inputfield;
+    int colors_number = int_input(minimumcolors, maximumcolors);
+    cout << "The number of colours you play with is: " << colors_number << "\n";
+    cout << endsection << '\n' << '\n';
+
+            //length
+    cout << "How long do you want the secret code to be?\nEnter a number between " << minimumlength << " and " << maximumlength << inputfield;
+    int secret_length = int_input(minimumlength, maximumlength);
+    cout << "The secret code is " << secret_length << " pins long\n";
+    cout << endsection << '\n' << '\n';
     return 0;
 }
 
-    int length_input(){
+    int int_input(int minimum, int maximum){
         int num;
         while (true) {
-            if (cin >> num && num > 0 && num < 10) {
+            if (cin >> num && num >= minimum && num <= maximum) {
                 cin.clear();
                 cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 return num;
             } else {
                 cin.clear();
                 cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                cout << "Invalid input! Please enter a number between 0 and 10." << inputfield;
+                cout << "Invalid input! Please enter a number between " << minimum << " and " << maximum << inputfield;
             }
         }
     }
+
 
     char gamemode_input(){
         char mode;
