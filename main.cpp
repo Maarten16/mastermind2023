@@ -11,9 +11,10 @@
 #define inputfield "\n\t: "
 #define endsection string(30, '=')
 
-
 using std::cout; using std::cin; using std::string;
 
+string codeinput_computer(int colors_number, int code_length);
+string codeinput_user(int colors_num, int codelength, std::vector<string> &color_names);
 int int_input(int minimum, int maximum);
 char gamemode_input();
 
@@ -25,9 +26,10 @@ int main() {
     const int maximumlength = 9;
     const int minimumguesses = 4;
     const int maximumguesses = 20;
-    string colornames[maximumcolors] = {"blue", "red", "green", "orange", "purple", "yellow", "brown", "pink", "grey"};
+    std::vector<string> colornames = {"blue", "red", "green", "orange", "purple", "yellow", "brown", "pink", "grey"};
 
-    //code
+
+            //welcome
     cout << "Hello, welcome to mastermind!\n";
 
             //gamemode
@@ -55,8 +57,18 @@ int main() {
             //guesses
     cout << "How many guesses do you want to have?\n" << "Enter a number between " << minimumguesses << " and " << maximumguesses << inputfield;
     int total_guesses = int_input(minimumguesses, maximumguesses);
-    cout << "You will have " << total_guesses << "guesses\n";
+    cout << "You will have " << total_guesses << " guesses\n";
     cout << endsection << '\n' << '\n';
+
+            //code input
+    if(gamemode == 'A' || gamemode == 'B'){
+        string code = codeinput_user(colors_number, code_length, colornames);
+        cout << code;
+    }
+    else{
+        string code = codeinput_computer(colors_number, code_length);
+        cout << code;
+    }
 
 
 
@@ -107,25 +119,54 @@ char gamemode_input(){
     }
 }
 
-string codeinput_user(int colors_num, int codelength, int &colors_name){
+string codeinput_computer(int colors_number, int code_length){
+    string code = "";
+    int random;
+    int ASCI_upper = 65;
+    for (int i = 0; i < code_length; i++){
+        random = (rand() % colors_number);
+        code += char(ASCI_upper + random);
+    }
+    return code;
+}
+
+string codeinput_user(int colors_num, int codelength, std::vector<string> &colornames){
     string code = "";
     string color;
     int ASCI_lower = 97;
     int ASCI_upper = 65;
 
 
-    while(codelength >= 0){// will become validate_color
+
+    while(codelength > 0){// will become validate_color
         cin >> color;
+        cin.clear();
+        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         if(color.size() == 1){
             int asci = int(color[0]);
             if (asci >= ASCI_upper && asci < ASCI_upper + colors_num){
                 code += color[0];
+                codelength--;
             }
             else if(asci >= ASCI_lower && asci < ASCI_lower + colors_num){
                 asci -= 32;
                 code += char(asci);
+                codelength--;
+            }
+            else{
+                cout << "invalid input";
             }
         }
-        else if()
+        else{
+            for(int i = 0; i < colors_num; i++){
+                if (color == colornames[i]){
+                    code += char(ASCI_upper + i);
+                    codelength--;
+                    break;
+                }
+                cout << "invalid input";
+            }
+        }
     }
+    return code;
 }
