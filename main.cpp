@@ -1,6 +1,7 @@
 #include <iostream>
 #include <limits>
 #include <vector>
+#include <math.h>
 
 #ifdef _WIN32
 #include <Windows.h>
@@ -13,6 +14,7 @@
 
 using std::cout; using std::cin; using std::string;
 
+char* generate_possibilities(int colors_num, int length, int possible_codes);
 string codeinput_computer(int colors_number, int code_length);
 string codeinput_user(int colors_num, int codelength, std::vector<string> &color_names);
 int int_input(int minimum, int maximum);
@@ -44,13 +46,13 @@ int main() {
 
             //colors
     cout << "With how many colors do you want to play?\n" << "Enter a number between " << minimumcolors << " and " << maximumcolors << inputfield;
-    int colors_number = int_input(minimumcolors, maximumcolors);
+    const int colors_number = int_input(minimumcolors, maximumcolors);
     cout << "The number of colours you will play with is: " << colors_number << "\n";
     cout << endsection << '\n' << '\n';
 
             //length
     cout << "How long do you want the code to be?\n" << "Enter a number between " << minimumlength << " and " << maximumlength << inputfield;
-    int code_length = int_input(minimumlength, maximumlength);
+    const int code_length = int_input(minimumlength, maximumlength);
     cout << "The code is " << code_length << " pins long\n";
     cout << endsection << '\n' << '\n';
 
@@ -61,15 +63,18 @@ int main() {
     cout << endsection << '\n' << '\n';
 
             //code input
+    string code;
     if(gamemode == 'A' || gamemode == 'B'){
-        string code = codeinput_user(colors_number, code_length, colornames);
-        cout << code;
+        code = codeinput_user(colors_number, code_length, colornames);
     }
     else{
-        string code = codeinput_computer(colors_number, code_length);
-        cout << code;
+        code = codeinput_computer(colors_number, code_length);
     }
+    cout << code;
 
+            //generate possible codes
+    int possible_codes = pow(colors_number, code_length);
+    char * possible_codes(colors_number, code_length, possible_codes);
 
 
 
@@ -136,8 +141,6 @@ string codeinput_user(int colors_num, int codelength, std::vector<string> &color
     int ASCI_lower = 97;
     int ASCI_upper = 65;
 
-
-
     while(codelength > 0){// will become validate_color
         cin >> color;
         cin.clear();
@@ -169,4 +172,9 @@ string codeinput_user(int colors_num, int codelength, std::vector<string> &color
         }
     }
     return code;
+}
+
+
+char* generate_possibilities(int colors_num, int length, int possible_codes){
+    char* new char[possible_codes * length];
 }
