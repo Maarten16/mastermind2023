@@ -73,8 +73,8 @@ int main() {
     cout << code;
 
             //generate possible codes
-    int possible_codes = pow(colors_number, code_length);
-    char * possible_codes(colors_number, code_length, possible_codes);
+//    int possible_codes = pow(colors_number, code_length);
+//    char * possible_codes(colors_number, code_length, possible_codes);
 
 
 
@@ -141,10 +141,15 @@ string codeinput_user(int colors_num, int codelength, std::vector<string> &color
     int ASCI_lower = 97;
     int ASCI_upper = 65;
 
+
     while(codelength > 0){// will become validate_color
+        //input
+        cout << '\t'<<':';
         cin >> color;
         cin.clear();
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+        //check input
         if(color.size() == 1){
             int asci = int(color[0]);
             if (asci >= ASCI_upper && asci < ASCI_upper + colors_num){
@@ -157,7 +162,7 @@ string codeinput_user(int colors_num, int codelength, std::vector<string> &color
                 codelength--;
             }
             else{
-                cout << "invalid input";
+                cout << "invalid input. please try again\n";
             }
         }
         else{
@@ -165,16 +170,17 @@ string codeinput_user(int colors_num, int codelength, std::vector<string> &color
                 if (color == colornames[i]){
                     code += char(ASCI_upper + i);
                     codelength--;
-                    break;
+                    goto new_iter;
                 }
-                cout << "invalid input";
             }
+            cout << "invalid input. please try again\n";
         }
+        new_iter:;
     }
     return code;
 }
 
 
-char* generate_possibilities(int colors_num, int length, int possible_codes){
-    char* new char[possible_codes * length];
-}
+//char* generate_possibilities(int colors_num, int length, int possible_codes){
+//    char* new char[possible_codes * length];
+//}

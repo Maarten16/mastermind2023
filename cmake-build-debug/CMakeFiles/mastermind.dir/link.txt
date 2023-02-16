@@ -1,0 +1,3 @@
+"C:\it\c++\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\mastermind.dir/objects.a
+C:\it\C__~1\CLION2~1.1\bin\mingw\bin\ar.exe qc CMakeFiles\mastermind.dir/objects.a @CMakeFiles\mastermind.dir\objects1.rsp
+C:\it\C__~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\mastermind.dir/objects.a -Wl,--no-whole-archive -o mastermind.exe -Wl,--out-implib,libmastermind.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\mastermind.dir\linklibs.rsp
