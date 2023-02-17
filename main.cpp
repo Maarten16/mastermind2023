@@ -14,7 +14,6 @@
 
 using std::cout; using std::cin; using std::string;
 
-char* generate_possibilities(int colors_num, int length, int possible_codes);
 string codeinput_computer(int colors_number, int code_length);
 string codeinput_user(int colors_num, int codelength, std::vector<string> &color_names);
 int int_input(int minimum, int maximum);
@@ -34,7 +33,7 @@ int main() {
             //welcome
     cout << "Hello, welcome to mastermind!\n";
 
-            //gamemode
+            //choose gamemode
     cout << "Which gamemode do you want to play?\n";
     cout << "Type 'A' if you player to make and guess the code\n";
     cout << "Type 'B' if you want player to make and computer to guess the code\n";
@@ -44,25 +43,25 @@ int main() {
     cout << "You chose gamemode " << gamemode << "\n";
     cout << endsection << '\n' << '\n';
 
-            //colors
+            //choose number of colors
     cout << "With how many colors do you want to play?\n" << "Enter a number between " << minimumcolors << " and " << maximumcolors << inputfield;
     const int colors_number = int_input(minimumcolors, maximumcolors);
     cout << "The number of colours you will play with is: " << colors_number << "\n";
     cout << endsection << '\n' << '\n';
 
-            //length
+            //chose code length
     cout << "How long do you want the code to be?\n" << "Enter a number between " << minimumlength << " and " << maximumlength << inputfield;
     const int code_length = int_input(minimumlength, maximumlength);
     cout << "The code is " << code_length << " pins long\n";
     cout << endsection << '\n' << '\n';
 
-            //guesses
+            //choose ammount of guesses
     cout << "How many guesses do you want to have?\n" << "Enter a number between " << minimumguesses << " and " << maximumguesses << inputfield;
     int total_guesses = int_input(minimumguesses, maximumguesses);
     cout << "You will have " << total_guesses << " guesses\n";
     cout << endsection << '\n' << '\n';
 
-            //code input
+            //input secret code
     string code;
     if(gamemode == 'A' || gamemode == 'B'){
         code = codeinput_user(colors_number, code_length, colornames);
@@ -72,9 +71,7 @@ int main() {
     }
     cout << code;
 
-            //generate possible codes
-//    int possible_codes = pow(colors_number, code_length);
-//    char * possible_codes(colors_number, code_length, possible_codes);
+
 
 
 
@@ -140,6 +137,10 @@ string codeinput_user(int colors_num, int codelength, std::vector<string> &color
     string color;
     int ASCI_lower = 97;
     int ASCI_upper = 65;
+    cout << "please enter your colours one by one. the possible colours are:\n";
+    for(int i = 0; i < colors_num; i++){
+        cout << char(ASCI_upper + i) << ") " << colornames[i] << '\n';
+    }
 
 
     while(codelength > 0){// will become validate_color
@@ -181,6 +182,4 @@ string codeinput_user(int colors_num, int codelength, std::vector<string> &color
 }
 
 
-//char* generate_possibilities(int colors_num, int length, int possible_codes){
-//    char* new char[possible_codes * length];
-//}
+
