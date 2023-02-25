@@ -2,22 +2,19 @@
 #include <limits>
 #include <vector>
 #include <math.h>
-
-#ifdef _WIN32
-#include <Windows.h>
-#else
-#include <unistd.h>
-#endif
+#include <memory>
 
 #define inputfield "\n\t: "
 #define endsection string(30, '=')
 
 using std::cout; using std::cin; using std::string;
 
+char * all_possible_codes(int colours, int length, int total_number);
 string codeinput_computer(int colors_number, int code_length);
 string codeinput_user(int colors_num, int codelength, std::vector<string> &color_names);
 int int_input(int minimum, int maximum);
 char gamemode_input();
+
 
 int main() {
     //adjustable variables
@@ -52,6 +49,9 @@ int main() {
             //chose code length
     cout << "How long do you want the code to be?\n" << "Enter a number between " << minimumlength << " and " << maximumlength << inputfield;
     const int code_length = int_input(minimumlength, maximumlength);
+    while(code_length == colors_number == 9){
+        cout << "please enter a length of max 8 when playing with 9 numbers";
+    }
     cout << "The code is " << code_length << " pins long\n";
     cout << endsection << '\n' << '\n';
 
@@ -61,7 +61,7 @@ int main() {
     cout << "You will have " << total_guesses << " guesses\n";
     cout << endsection << '\n' << '\n';
 
-            //input secret code
+            //determination and input secret code
     string code;
     if(gamemode == 'A' || gamemode == 'B'){
         code = codeinput_user(colors_number, code_length, colornames);
@@ -69,9 +69,12 @@ int main() {
     else{
         code = codeinput_computer(colors_number, code_length);
     }
-    cout << code;
+    cout << code << '\n';
 
-
+            //generate all possible combinations
+    int possible_codes_number = pow(colors_number, code_length);
+    char * possible = all_possible_codes(colors_number, code_length, possible_codes_number);
+    cout << possible;
 
 
 
@@ -137,14 +140,15 @@ string codeinput_user(int colors_num, int codelength, std::vector<string> &color
     string color;
     int ASCI_lower = 97;
     int ASCI_upper = 65;
+
+        //display possible inputs
     cout << "please enter your colours one by one. the possible colours are:\n";
     for(int i = 0; i < colors_num; i++){
         cout << char(ASCI_upper + i) << ") " << colornames[i] << '\n';
     }
 
-
     while(codelength > 0){// will become validate_color
-        //input
+        //input color
         cout << '\t'<<':';
         cin >> color;
         cin.clear();
@@ -180,6 +184,51 @@ string codeinput_user(int colors_num, int codelength, std::vector<string> &color
     }
     return code;
 }
+
+char * all_possible_codes(const int colours, const int length, const int total_number){
+    int size = total_number * length;
+    char* all_codes = new char[size + 1]; //dont forget to destroy
+    for (int i = 0; i < size; i++){
+        all_codes[i] = 'A';
+    }
+    all_codes[size] = '\0';
+    char* position = all_codes; //dont forget to destroy
+    int to_add[length];
+    for (int i = 0; i < length; i++) {
+        to_add [i] = 0;
+    }
+
+    for (int i = 0; i < total_number; i++) {
+        for (int j = 0; j < length; j++) {
+            position[j] += to_add[j];
+        }
+        if (!(to_add[0] == colours - 1)) {
+            to_add[0]++;
+        }
+        else {
+            int i = 1;
+            for (; i < length; i++) {
+                if (!(to_add[i] == colours - 1)) {
+                    to_add[i]++;
+                    for (int j = i - 1; j >= 0; j--) {
+                        to_add[j] = 0;
+                    }
+                    break;
+                }
+            }
+        }
+        position += length;
+
+    }
+    return all_codes;
+
+
+
+
+
+    return 0;
+}
+
 
 
 
