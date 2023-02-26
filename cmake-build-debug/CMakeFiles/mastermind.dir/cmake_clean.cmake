@@ -1,4 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/mastermind.dir/gamesettings.cpp.obj"
+  "CMakeFiles/mastermind.dir/gamesettings.cpp.obj.d"
+  "CMakeFiles/mastermind.dir/guess_secret_code.cpp.obj"
+  "CMakeFiles/mastermind.dir/guess_secret_code.cpp.obj.d"
+  "CMakeFiles/mastermind.dir/input_secret_code.cpp.obj"
+  "CMakeFiles/mastermind.dir/input_secret_code.cpp.obj.d"
   "CMakeFiles/mastermind.dir/main.cpp.obj"
   "CMakeFiles/mastermind.dir/main.cpp.obj.d"
   "libmastermind.dll.a"

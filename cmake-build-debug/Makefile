@@ -128,6 +128,78 @@ mastermind/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/build
 .PHONY : mastermind/fast
 
+gamesettings.obj: gamesettings.cpp.obj
+.PHONY : gamesettings.obj
+
+# target to build an object file
+gamesettings.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/gamesettings.cpp.obj
+.PHONY : gamesettings.cpp.obj
+
+gamesettings.i: gamesettings.cpp.i
+.PHONY : gamesettings.i
+
+# target to preprocess a source file
+gamesettings.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/gamesettings.cpp.i
+.PHONY : gamesettings.cpp.i
+
+gamesettings.s: gamesettings.cpp.s
+.PHONY : gamesettings.s
+
+# target to generate assembly for a file
+gamesettings.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/gamesettings.cpp.s
+.PHONY : gamesettings.cpp.s
+
+guess_secret_code.obj: guess_secret_code.cpp.obj
+.PHONY : guess_secret_code.obj
+
+# target to build an object file
+guess_secret_code.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/guess_secret_code.cpp.obj
+.PHONY : guess_secret_code.cpp.obj
+
+guess_secret_code.i: guess_secret_code.cpp.i
+.PHONY : guess_secret_code.i
+
+# target to preprocess a source file
+guess_secret_code.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/guess_secret_code.cpp.i
+.PHONY : guess_secret_code.cpp.i
+
+guess_secret_code.s: guess_secret_code.cpp.s
+.PHONY : guess_secret_code.s
+
+# target to generate assembly for a file
+guess_secret_code.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/guess_secret_code.cpp.s
+.PHONY : guess_secret_code.cpp.s
+
+input_secret_code.obj: input_secret_code.cpp.obj
+.PHONY : input_secret_code.obj
+
+# target to build an object file
+input_secret_code.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/input_secret_code.cpp.obj
+.PHONY : input_secret_code.cpp.obj
+
+input_secret_code.i: input_secret_code.cpp.i
+.PHONY : input_secret_code.i
+
+# target to preprocess a source file
+input_secret_code.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/input_secret_code.cpp.i
+.PHONY : input_secret_code.cpp.i
+
+input_secret_code.s: input_secret_code.cpp.s
+.PHONY : input_secret_code.s
+
+# target to generate assembly for a file
+input_secret_code.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/input_secret_code.cpp.s
+.PHONY : input_secret_code.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +233,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... mastermind
+	@echo ... gamesettings.obj
+	@echo ... gamesettings.i
+	@echo ... gamesettings.s
+	@echo ... guess_secret_code.obj
+	@echo ... guess_secret_code.i
+	@echo ... guess_secret_code.s
+	@echo ... input_secret_code.obj
+	@echo ... input_secret_code.i
+	@echo ... input_secret_code.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

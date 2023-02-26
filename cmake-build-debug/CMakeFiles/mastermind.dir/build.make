@@ -82,19 +82,67 @@ CMakeFiles/mastermind.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mastermind.dir/main.cpp.s"
 	C:\it\C__~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\maart\CLionProjects\mastermind2023\main.cpp -o CMakeFiles\mastermind.dir\main.cpp.s
 
+CMakeFiles/mastermind.dir/input_secret_code.cpp.obj: CMakeFiles/mastermind.dir/flags.make
+CMakeFiles/mastermind.dir/input_secret_code.cpp.obj: ../input_secret_code.cpp
+CMakeFiles/mastermind.dir/input_secret_code.cpp.obj: CMakeFiles/mastermind.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\maart\CLionProjects\mastermind2023\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mastermind.dir/input_secret_code.cpp.obj"
+	C:\it\C__~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mastermind.dir/input_secret_code.cpp.obj -MF CMakeFiles\mastermind.dir\input_secret_code.cpp.obj.d -o CMakeFiles\mastermind.dir\input_secret_code.cpp.obj -c C:\Users\maart\CLionProjects\mastermind2023\input_secret_code.cpp
+
+CMakeFiles/mastermind.dir/input_secret_code.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mastermind.dir/input_secret_code.cpp.i"
+	C:\it\C__~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\maart\CLionProjects\mastermind2023\input_secret_code.cpp > CMakeFiles\mastermind.dir\input_secret_code.cpp.i
+
+CMakeFiles/mastermind.dir/input_secret_code.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mastermind.dir/input_secret_code.cpp.s"
+	C:\it\C__~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\maart\CLionProjects\mastermind2023\input_secret_code.cpp -o CMakeFiles\mastermind.dir\input_secret_code.cpp.s
+
+CMakeFiles/mastermind.dir/gamesettings.cpp.obj: CMakeFiles/mastermind.dir/flags.make
+CMakeFiles/mastermind.dir/gamesettings.cpp.obj: ../gamesettings.cpp
+CMakeFiles/mastermind.dir/gamesettings.cpp.obj: CMakeFiles/mastermind.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\maart\CLionProjects\mastermind2023\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mastermind.dir/gamesettings.cpp.obj"
+	C:\it\C__~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mastermind.dir/gamesettings.cpp.obj -MF CMakeFiles\mastermind.dir\gamesettings.cpp.obj.d -o CMakeFiles\mastermind.dir\gamesettings.cpp.obj -c C:\Users\maart\CLionProjects\mastermind2023\gamesettings.cpp
+
+CMakeFiles/mastermind.dir/gamesettings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mastermind.dir/gamesettings.cpp.i"
+	C:\it\C__~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\maart\CLionProjects\mastermind2023\gamesettings.cpp > CMakeFiles\mastermind.dir\gamesettings.cpp.i
+
+CMakeFiles/mastermind.dir/gamesettings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mastermind.dir/gamesettings.cpp.s"
+	C:\it\C__~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\maart\CLionProjects\mastermind2023\gamesettings.cpp -o CMakeFiles\mastermind.dir\gamesettings.cpp.s
+
+CMakeFiles/mastermind.dir/guess_secret_code.cpp.obj: CMakeFiles/mastermind.dir/flags.make
+CMakeFiles/mastermind.dir/guess_secret_code.cpp.obj: ../guess_secret_code.cpp
+CMakeFiles/mastermind.dir/guess_secret_code.cpp.obj: CMakeFiles/mastermind.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\maart\CLionProjects\mastermind2023\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mastermind.dir/guess_secret_code.cpp.obj"
+	C:\it\C__~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mastermind.dir/guess_secret_code.cpp.obj -MF CMakeFiles\mastermind.dir\guess_secret_code.cpp.obj.d -o CMakeFiles\mastermind.dir\guess_secret_code.cpp.obj -c C:\Users\maart\CLionProjects\mastermind2023\guess_secret_code.cpp
+
+CMakeFiles/mastermind.dir/guess_secret_code.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mastermind.dir/guess_secret_code.cpp.i"
+	C:\it\C__~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\maart\CLionProjects\mastermind2023\guess_secret_code.cpp > CMakeFiles\mastermind.dir\guess_secret_code.cpp.i
+
+CMakeFiles/mastermind.dir/guess_secret_code.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mastermind.dir/guess_secret_code.cpp.s"
+	C:\it\C__~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\maart\CLionProjects\mastermind2023\guess_secret_code.cpp -o CMakeFiles\mastermind.dir\guess_secret_code.cpp.s
+
 # Object files for target mastermind
 mastermind_OBJECTS = \
-"CMakeFiles/mastermind.dir/main.cpp.obj"
+"CMakeFiles/mastermind.dir/main.cpp.obj" \
+"CMakeFiles/mastermind.dir/input_secret_code.cpp.obj" \
+"CMakeFiles/mastermind.dir/gamesettings.cpp.obj" \
+"CMakeFiles/mastermind.dir/guess_secret_code.cpp.obj"
 
 # External object files for target mastermind
 mastermind_EXTERNAL_OBJECTS =
 
 mastermind.exe: CMakeFiles/mastermind.dir/main.cpp.obj
+mastermind.exe: CMakeFiles/mastermind.dir/input_secret_code.cpp.obj
+mastermind.exe: CMakeFiles/mastermind.dir/gamesettings.cpp.obj
+mastermind.exe: CMakeFiles/mastermind.dir/guess_secret_code.cpp.obj
 mastermind.exe: CMakeFiles/mastermind.dir/build.make
 mastermind.exe: CMakeFiles/mastermind.dir/linklibs.rsp
 mastermind.exe: CMakeFiles/mastermind.dir/objects1.rsp
 mastermind.exe: CMakeFiles/mastermind.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\maart\CLionProjects\mastermind2023\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mastermind.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\maart\CLionProjects\mastermind2023\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable mastermind.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\mastermind.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

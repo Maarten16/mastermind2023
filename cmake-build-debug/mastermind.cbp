@@ -84,6 +84,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/maart/CLionProjects/mastermind2023/gamesettings.cpp">
+			<Option target="mastermind"/>
+		</Unit>
+		<Unit filename="C:/Users/maart/CLionProjects/mastermind2023/gamesettings.h">
+			<Option target="mastermind"/>
+		</Unit>
+		<Unit filename="C:/Users/maart/CLionProjects/mastermind2023/guess_secret_code.cpp">
+			<Option target="mastermind"/>
+		</Unit>
+		<Unit filename="C:/Users/maart/CLionProjects/mastermind2023/guess_secret_code.h">
+			<Option target="mastermind"/>
+		</Unit>
+		<Unit filename="C:/Users/maart/CLionProjects/mastermind2023/input_secret_code.cpp">
+			<Option target="mastermind"/>
+		</Unit>
+		<Unit filename="C:/Users/maart/CLionProjects/mastermind2023/input_secret_code.h">
+			<Option target="mastermind"/>
+		</Unit>
 		<Unit filename="C:/Users/maart/CLionProjects/mastermind2023/main.cpp">
 			<Option target="mastermind"/>
 		</Unit>
