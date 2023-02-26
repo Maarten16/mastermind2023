@@ -4,6 +4,7 @@
 #include "input_secret_code.h"
 #include "gamesettings.h"
 #include "guess_secret_code.h"
+#include "result.h"
 
 #define inputfield "\n\t: "
 #define endsection string(30, '=')
@@ -72,7 +73,6 @@ int main() {
     else{
         codestr = codeinput_computer(colors_number, code_length);
     }
-    cout << codestr << '\n';
     
     //guess_secret_code
     //==================================================================================================================
@@ -88,6 +88,9 @@ int main() {
                 code[i] = codestr[i];
             }
             black_white score = black_white_scorer(guess, code, code_length);
+            if (score.black == code_length){
+                congratulate();
+            }
             cout << strguess<< ") score [" << score.black << ' ' << score.white << "]\n";
             total_guesses --;
         }
@@ -103,26 +106,26 @@ int main() {
 
         for (int i = 0; i < code_length; i++){
             guess[i] = possible[i];
-            cout << guess[i] << '?';
             code[i] = codestr[i];
         }
         while(total_guesses > 0){
             black_white score = black_white_scorer(guess, code, code_length);
+            if (score.black == code_length){
+                congratulate();
+            }
             possible = filter_codes(possible, guess, code_length, possible_codes_amount, score);
             total_guesses--;
             for (int i = 0; i < code_length; i++){
                 guess[i] = possible[i];
-                cout << guess[i];
             }
-            cout << '\n';
         }
     }
-    
 
+    
+consolation();
 
 
 //need to delete the heap array
-:end
     return 0;
 }
 
