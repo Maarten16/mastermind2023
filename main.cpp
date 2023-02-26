@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <math.h>
-#include <chrono>
 #include "input_secret_code.h"
 #include "gamesettings.h"
 #include "guess_secret_code.h"
@@ -56,9 +55,9 @@ int main() {
     cout << endsection << '\n' << '\n';
 
             //choose ammount of guesses
-    cout << "How many guesses do you want to have?\n" << "Enter a number between " << minimumguesses << " and " << maximumguesses << inputfield;
+    cout << "How many guesses do you want available?\n" << "Enter a number between " << minimumguesses << " and " << maximumguesses << inputfield;
     int total_guesses = int_input(minimumguesses, maximumguesses);
-    cout << "You will have " << total_guesses << " guesses\n";
+    cout << "There will be " << total_guesses << " guesses available\n";
     cout << endsection << '\n' << '\n';
 
     
@@ -78,27 +77,39 @@ int main() {
     //guess_secret_code
     //==================================================================================================================
 
-            //generate all possible combinations
 
-            //input guess
+
+            //user guesses
     if (gamemode == 'A' || gamemode == 'C'){
-        string strguess = codeinput_user(colors_number, code_length, colornames);
-        char guess[code_length];char code[code_length];
+        while(total_guesses >= 0){
+            string strguess = codeinput_user(colors_number, code_length, colornames);
+            char guess[code_length];
+            char code[code_length];
+            for (int i = 0; i < code_length; i++){
+                guess[i] = strguess[i];
+                code[i] = codestr[i];
+            }
+            black_white score = black_white_scorer(guess, code, code_length);
+            cout << strguess<< ") score [" << score.black << ' ' << score.white << "]\n";
+            total_guesses --;
+        }
+
+    }
+            //computer guesses
+    else{
+        int possible_codes_amount = pow(colors_number, code_length);
+        //generate all possible combinations
+        char * possible = all_possible_codes(colors_number, code_length, possible_codes_amount);
+        char guess[code_length];
+        char code[code_length];
+
         for (int i = 0; i < code_length; i++){
-            guess[i] = strguess[i];
+            guess[i] = possible[i];
             code[i] = codestr[i];
         }
         black_white score = black_white_scorer(guess, code, code_length);
-        cout << score.black << ' ' << score.white;
-    }
-    else{
-        int possible_codes_amount = pow(colors_number, code_length);
-        char * possible = all_possible_codes(colors_number, code_length, possible_codes_amount);
-        char code[code_length];
-        for (int i = 0; i < code_length; i++) {
-            code[i] = possible[i];
-        }
-
+        cout << code<< '\n';
+        cout << ") score [" << score.black << ' ' << score.white << "]\n";
     }
     
 
