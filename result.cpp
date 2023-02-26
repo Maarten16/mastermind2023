@@ -1,6 +1,6 @@
 #include "result.h"
 void congratulate(){
-    std::cout << "☺ congratulations! the correct code has been guessed! ☺";
+    std::cout << "congratulations! the correct code has been guessed!";
     std::exit(0);
 }
 

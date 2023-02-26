@@ -80,6 +80,7 @@ int main() {
             //user guesses
     if (gamemode == 'A' || gamemode == 'C'){
         while(total_guesses >= 0){
+            cout << "you have " << total_guesses << " guess(es) left. please enter a guess \n";
             string strguess = codeinput_user(colors_number, code_length, colornames);
             char guess[code_length];
             char code[code_length];
