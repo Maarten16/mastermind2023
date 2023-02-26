@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mastermind.dir/input_secret_code.cpp.obj.d"
   "CMakeFiles/mastermind.dir/main.cpp.obj"
   "CMakeFiles/mastermind.dir/main.cpp.obj.d"
+  "CMakeFiles/mastermind.dir/result.cpp.obj"
+  "CMakeFiles/mastermind.dir/result.cpp.obj.d"
   "libmastermind.dll.a"
   "mastermind.exe"
   "mastermind.exe.manifest"

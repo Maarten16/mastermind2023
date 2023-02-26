@@ -224,6 +224,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+result.obj: result.cpp.obj
+.PHONY : result.obj
+
+# target to build an object file
+result.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/result.cpp.obj
+.PHONY : result.cpp.obj
+
+result.i: result.cpp.i
+.PHONY : result.i
+
+# target to preprocess a source file
+result.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/result.cpp.i
+.PHONY : result.cpp.i
+
+result.s: result.cpp.s
+.PHONY : result.s
+
+# target to generate assembly for a file
+result.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mastermind.dir\build.make CMakeFiles/mastermind.dir/result.cpp.s
+.PHONY : result.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -245,6 +269,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... result.obj
+	@echo ... result.i
+	@echo ... result.s
 .PHONY : help
 
 

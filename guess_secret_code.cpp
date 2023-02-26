@@ -44,13 +44,16 @@ void guess_user(int colors_number, int code_length, string code){
     cout << colors_number, code_length, code;
 }
 
-char* filter_codes(char* all_codes, char* code, int length, int total_number, black_white score, int size){
-    char* filtered_codes = new char[size + 1];
+char* filter_codes(char * all_codes, char* guess, int length, int total_number, black_white score){
+    char* filtered_codes = new char[total_number * length + 1];
     char* filtered_position = filtered_codes;
     for(int i = 0; i < total_number; i++){
-        black_white result = black_white_scorer(all_codes, code, length);
-        if (result.white == score.white && result.black && score.black){
-
+        black_white result = black_white_scorer(all_codes, guess, length);
+        if ((result.white == score.white) && (result.black == score.black)){
+            for(int i = 0; i < length; i++){
+                filtered_position[i] = all_codes[i];
+            }
+            filtered_position+= length;
         }
         all_codes += length;
     }

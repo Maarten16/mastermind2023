@@ -19,7 +19,7 @@ int main() {
     const int minimumlength = 2;
     const int maximumlength = 9;
     const int minimumguesses = 4;
-    const int maximumguesses = 20;
+    const int maximumguesses = 200;
     std::vector<string> colornames = {"blue", "red", "green", "orange", "purple", "yellow", "brown", "pink", "grey"};
 
 
@@ -77,8 +77,6 @@ int main() {
     //guess_secret_code
     //==================================================================================================================
 
-
-
             //user guesses
     if (gamemode == 'A' || gamemode == 'C'){
         while(total_guesses >= 0){
@@ -105,17 +103,26 @@ int main() {
 
         for (int i = 0; i < code_length; i++){
             guess[i] = possible[i];
+            cout << guess[i] << '?';
             code[i] = codestr[i];
         }
-        black_white score = black_white_scorer(guess, code, code_length);
-        cout << code<< '\n';
-        cout << ") score [" << score.black << ' ' << score.white << "]\n";
+        while(total_guesses > 0){
+            black_white score = black_white_scorer(guess, code, code_length);
+            possible = filter_codes(possible, guess, code_length, possible_codes_amount, score);
+            total_guesses--;
+            for (int i = 0; i < code_length; i++){
+                guess[i] = possible[i];
+                cout << guess[i];
+            }
+            cout << '\n';
+        }
     }
     
 
 
 
 //need to delete the heap array
+:end
     return 0;
 }
 

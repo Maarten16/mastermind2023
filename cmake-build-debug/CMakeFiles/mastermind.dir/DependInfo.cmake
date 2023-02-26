@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/maart/CLionProjects/mastermind2023/guess_secret_code.cpp" "CMakeFiles/mastermind.dir/guess_secret_code.cpp.obj" "gcc" "CMakeFiles/mastermind.dir/guess_secret_code.cpp.obj.d"
   "C:/Users/maart/CLionProjects/mastermind2023/input_secret_code.cpp" "CMakeFiles/mastermind.dir/input_secret_code.cpp.obj" "gcc" "CMakeFiles/mastermind.dir/input_secret_code.cpp.obj.d"
   "C:/Users/maart/CLionProjects/mastermind2023/main.cpp" "CMakeFiles/mastermind.dir/main.cpp.obj" "gcc" "CMakeFiles/mastermind.dir/main.cpp.obj.d"
+  "C:/Users/maart/CLionProjects/mastermind2023/result.cpp" "CMakeFiles/mastermind.dir/result.cpp.obj" "gcc" "CMakeFiles/mastermind.dir/result.cpp.obj.d"
   )
 
 # Targets to which this target links.

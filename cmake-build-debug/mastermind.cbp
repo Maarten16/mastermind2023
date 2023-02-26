@@ -105,6 +105,12 @@
 		<Unit filename="C:/Users/maart/CLionProjects/mastermind2023/main.cpp">
 			<Option target="mastermind"/>
 		</Unit>
+		<Unit filename="C:/Users/maart/CLionProjects/mastermind2023/result.cpp">
+			<Option target="mastermind"/>
+		</Unit>
+		<Unit filename="C:/Users/maart/CLionProjects/mastermind2023/result.h">
+			<Option target="mastermind"/>
+		</Unit>
 		<Unit filename="C:/Users/maart/CLionProjects/mastermind2023/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
